@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.analista.Prueba_punto_venta.model.dao;
+package com.analistas.pvd2019.model.dao;
 
 /**
  *
- * @author nahuel
+ * @author matia
  */
 public interface ITicket_Dao {
     
