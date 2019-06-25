@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.analistas.pvd2019.Pvd2019ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.336 s - in com.analistas.pvd2019.Pvd2019ApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.177 s <<< FAILURE! - in com.analistas.pvd2019.Pvd2019ApplicationTests
+contextLoads(com.analistas.pvd2019.Pvd2019ApplicationTests)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cliente_Service_Impl': Unsatisfied dependency expressed through field 'clienteDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ICliente_Dao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.analistas.pvd2019.model.entity.Cliente
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ICliente_Dao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.analistas.pvd2019.model.entity.Cliente
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.analistas.pvd2019.model.entity.Cliente
+
