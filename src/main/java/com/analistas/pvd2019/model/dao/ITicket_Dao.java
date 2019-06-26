@@ -5,10 +5,13 @@
  */
 package com.analistas.pvd2019.model.dao;
 
+import com.analistas.pvd2019.model.entity.Ticket;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  *
  * @author matia
  */
-public interface ITicket_Dao {
+public interface ITicket_Dao extends JpaRepository<Ticket, Integer>{
     
 }
