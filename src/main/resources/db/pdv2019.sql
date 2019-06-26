@@ -30,7 +30,8 @@ CREATE TABLE Compras(
 	pk_id_com int not null primary key auto_increment,
     descu double not null,
 	monto double not null,
-    cantidad int not null
+    cantidad int not null,
+    descripcion varchar(50) not null
 );
 
 CREATE TABLE Detalles_Compras(
@@ -70,6 +71,7 @@ CREATE TABLE Provincias(
 
 CREATE TABLE Ventas(
 	pk_id_ven int not null primary key auto_increment,
+    descripcion varchar(50),
     descu double not null,
 	monto double not null,
     cantidad int not null
@@ -81,6 +83,10 @@ CREATE TABLE Detalles_Ventas(
     hora datetime not null,
     comprobante varchar(25) not null,
     estado varchar(25) not null 
+);
+
+CREATE TABLE Tickets(
+	pk_id_tic int not null primary key auto_increment
 );
 
 /*
@@ -114,6 +120,7 @@ ALTER TABLE Compras ADD COLUMN fk_id_usuario INT NULL;
 ALTER TABLE Detalles_Ventas ADD COLUMN fk_id_cli INT NULL;
 ALTER TABLE Detalles_Ventas ADD COLUMN fk_id_vent INT NULL;
 ALTER TABLE Clientes ADD COLUMN fk_id_ciudad INT NULL;
+ALTER TABLE Tickets ADD COLUMN fk_id_det_vent INT NULL;
 
 -- MatiasEspindola 20/06/2019 --
 
@@ -158,3 +165,6 @@ FOREIGN KEY (fk_id_usuario) REFERENCES Usuarios(pk_id_us);
 
  ALTER TABLE Usuarios ADD CONSTRAINT fk_id_rol
 FOREIGN KEY (fk_id_rol) REFERENCES Roles(pk_id_rol);
+
+ ALTER TABLE Tickets ADD CONSTRAINT fk_id_det_vent
+FOREIGN KEY (fk_id_det_vent) REFERENCES Detalles_Ventas(pk_id_dv);

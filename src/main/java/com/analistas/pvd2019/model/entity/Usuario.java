@@ -5,16 +5,40 @@
  */
 package com.analistas.pvd2019.model.entity;
 
+import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 /**
  *
  * @author nahuel
  */
-public class Usuario {
+@Entity
+@Table(name = "usuarios")
+public class Usuario implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "pk_id_us")
     private int id;
-    private String user;
-    private String pass;
+
+    private String us;
+    private String ps;
     private boolean hab;
+    
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "usuario")
+    private List<Venta> ventas;
+    
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "usuario")
+    private List<Rol> roles;
 
     public int getId() {
         return id;
@@ -24,20 +48,20 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getUser() {
-        return user;
+    public String getUs() {
+        return us;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUs(String us) {
+        this.us = us;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPs() {
+        return ps;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPs(String ps) {
+        this.ps = ps;
     }
 
     public boolean isHab() {
@@ -47,6 +71,23 @@ public class Usuario {
     public void setHab(boolean hab) {
         this.hab = hab;
     }
+
+    public List<Venta> getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(List<Venta> ventas) {
+        this.ventas = ventas;
+    }
+
+    public List<Rol> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Rol> roles) {
+        this.roles = roles;
+    }
     
     
+
 }
