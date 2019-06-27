@@ -24,7 +24,7 @@ import javax.persistence.Table;
  * @author matia
  */
 @Entity
-@Table(name = "ciudades")
+@Table(name = "Ciudades")
 public class Ciudad implements Serializable {
 
     @Id
