@@ -5,10 +5,23 @@
  */
 package com.analistas.pvd2019.model.service;
 
+import com.analistas.pvd2019.model.entity.Cliente;
+import java.util.List;
+
 /**
  *
  * @author nahuel
  */
-public interface ICliente_Service {
+public interface ICliente_Service  {
+    
+    public List<Cliente> buscarTodo();
+    
+    public Cliente BuscarPorId(int id);
+    
+    public void save(Cliente cliente);
+    
+    
+	
+	public void Borrar(int id);
     
 }

@@ -14,4 +14,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface ICliente_Dao extends JpaRepository<Cliente, Integer>{
     
+    
+    
 }
