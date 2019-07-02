@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.analistas.pvd2019.Pvd2019ApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.033 s - in com.analistas.pvd2019.Pvd2019ApplicationTests
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.377 s - in com.analistas.pvd2019.Pvd2019ApplicationTests
+>>>>>>> 38f52bc87434364a96e558d5a9699acdfecaab61

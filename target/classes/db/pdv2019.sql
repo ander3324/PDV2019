@@ -60,8 +60,7 @@ CREATE TABLE Proveedores(
 
 CREATE TABLE Ciudades(
 	pk_id_ciu int not null primary key auto_increment,
-    ciudad varchar(25) not null,
-    cp varchar(25) not null
+    ciudad varchar(60) not null
 );
 
 CREATE TABLE Provincias(

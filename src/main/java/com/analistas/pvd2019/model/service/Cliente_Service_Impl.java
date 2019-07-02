@@ -16,11 +16,11 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author nahuel
  */
-
 @Service
-public class Cliente_Service_Impl implements ICliente_Service{
-    
+public class Cliente_Service_Impl implements ICliente_Service {
+
     @Autowired
+<<<<<<< HEAD
     ICliente_Dao dao;
     
     @Override
@@ -50,4 +50,14 @@ public class Cliente_Service_Impl implements ICliente_Service{
         dao.deleteById(id);
     }
     
+=======
+    private ICliente_Dao clienteDao;
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Cliente> findAll() {
+        return clienteDao.findAll();
+    }
+
+>>>>>>> 38f52bc87434364a96e558d5a9699acdfecaab61
 }

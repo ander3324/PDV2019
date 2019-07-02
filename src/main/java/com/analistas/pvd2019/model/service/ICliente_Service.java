@@ -24,4 +24,6 @@ public interface ICliente_Service  {
 	
 	public void Borrar(int id);
     
+    public List<Cliente> findAll();
+    
 }

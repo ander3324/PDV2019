@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+<<<<<<< HEAD
 package com.analistas.pvd2019.controller;
 
 import com.analistas.pvd2019.model.entity.Cliente;
@@ -13,6 +14,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+=======
+
+>>>>>>> 38f52bc87434364a96e558d5a9699acdfecaab61
 
 /**
  *

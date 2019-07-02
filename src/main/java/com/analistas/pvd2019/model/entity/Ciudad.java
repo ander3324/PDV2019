@@ -24,7 +24,7 @@ import javax.persistence.Table;
  * @author matia
  */
 @Entity
-@Table(name = "ciudades")
+@Table(name = "Ciudades")
 public class Ciudad implements Serializable {
 
     @Id
@@ -33,7 +33,7 @@ public class Ciudad implements Serializable {
     private int id;
 
     private String ciudad;
-    private String cp;
+
 
     @ManyToOne
     @JoinColumn(name = "fk_id_provincia", referencedColumnName = "pk_id_prov")
@@ -59,14 +59,6 @@ public class Ciudad implements Serializable {
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
-    }
-
-    public String getCp() {
-        return cp;
-    }
-
-    public void setCp(String cp) {
-        this.cp = cp;
     }
 
     public Provincia getProvincia() {

@@ -5,10 +5,15 @@
  */
 package com.analistas.pvd2019.model.service;
 
+import com.analistas.pvd2019.model.entity.Ciudad;
+import java.util.List;
+
 /**
  *
  * @author matia
  */
 public interface ICiudad_Service {
+    
+    public List<Ciudad> findAll();
     
 }
